@@ -19,3 +19,7 @@ Route::get('/prueba','PruebaController@welcome');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
