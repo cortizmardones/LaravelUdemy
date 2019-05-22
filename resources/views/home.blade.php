@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Tu estas logeado!!
+                    <hr>
+                    <label>Ingresa tu nombre</label>
+                    <br>
+                    <input type="text" class="form-control">
+                    <br> 
+                    <button class="btn btn-success">Enviar</button>
+
                 </div>
             </div>
         </div>
