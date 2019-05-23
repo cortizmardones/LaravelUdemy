@@ -18,6 +18,11 @@ Route::get('/', function () {
 
 Route::get('/productos','PruebaController@welcome');
 
+Route::get('/admin/products','ProductController@index'); //listado
+Route::get('/admin/products/create','ProductController@create'); //formulario
+Route::post('/admin/products','ProductController@store'); //registrar
+
+
 
 Auth::routes();
 

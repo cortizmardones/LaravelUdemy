@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Product;
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -25,6 +25,9 @@ class HomeController extends Controller
     public function index()
     {
       
-        return view('home');
+        //return view('home');
+        $products = Product::all();
+        $num = 0;
+        return view('productos')->with(compact('products','num'));
     }
 }
