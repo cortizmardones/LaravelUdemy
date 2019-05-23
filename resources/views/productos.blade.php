@@ -5,7 +5,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <h4 class="text-center">N° Producto: </h4>
                 <hr>
                 @foreach ($products as $product)
@@ -22,7 +22,7 @@
                 @endforeach
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <h4 class="text-center">Precio: </h4>
                 <hr>
                 @foreach ($products as $product)
@@ -32,7 +32,7 @@
             </div>
 
           
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <h4 class="text-center">Eliminar: </h4>
                 <hr>
                 @foreach ($products as $product)
@@ -41,6 +41,26 @@
                 
                 @endforeach
             </div>
+
+            
+            <div class="col-md-2">
+                <h4 class="text-center">Editar: </h4>
+                <hr>
+                @foreach ($products as $product)
+                
+                 <a href=" {{ url('/admin/products/.$product->id./formulario') }} "><h4>Editar</h4></a>
+                
+                @endforeach
+            </div>
+    
+             <div class="col-md-2">
+        
+            </div>
+
+               
+
+
+
 
         </div>
 
@@ -54,8 +74,6 @@
 
                 <br><br>
                 <a href=" {{ url('/admin/products/create') }} "><button class="btn btn-success">Nuevo Producto </button></a>
-                <a href=" {{ url('/admin/products/create') }} "><button class="btn btn-warning">Editar Producto </button></a>
-                <a href=" {{ url('/admin/products/create') }} "><button class="btn btn-danger">Eliminar Producto </button></a>
             </div>
             <div class="col-md-4">
                 

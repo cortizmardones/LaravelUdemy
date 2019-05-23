@@ -10,24 +10,24 @@
                 
             
                 <br>
-                Formulario de producto:
+                Formulario de edicion de  producto:
                 <br><br>
-                <form method="POST" action=" {{ url('/admin/products') }} ">
+                <form method="POST" action="">
                     {{ csrf_field() }}
                     
                     <label for="">Name</label>
-                    <input type="text" name="name" class="form-control" required>
+                    <input type="text" name="name" class="form-control">
                     <br>
                     <label for="">Description</label>
-                    <input type="text" name="description" class="form-control" required>
+                    <input type="text" name="description" class="form-control" value="">
                     <br>
                     <label for="">Long description</label>
-                    <input type="text" name="long_description" class="form-control"  required>
+                    <input type="text" name="long_description" class="form-control" value="" >
                     <br>
                     <label for="">Price</label>
-                    <input type="num" name="price" class="form-control" required>
+                    <input type="num" name="price" class="form-control" value="">
                     <br>
-                    <button class="btn btn-info">Enviar</button>
+                    <button class="btn btn-info">Modificar</button>
                 </form>
                 
             </div>
