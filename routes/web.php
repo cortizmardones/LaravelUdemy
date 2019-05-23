@@ -15,15 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+//Ruta prueba
 Route::get('/productos','PruebaController@welcome');
 
+
+//Ruta para los mantenedores
 Route::get('/admin/products','ProductController@index'); //listado
 Route::get('/admin/products/create','ProductController@create'); //formulario
 Route::post('/admin/products','ProductController@store'); //registrar
 
 
-
+//Ruta que tienen seguridad con middleware auth
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

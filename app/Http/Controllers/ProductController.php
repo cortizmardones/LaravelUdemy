@@ -15,11 +15,23 @@ class ProductController extends Controller
     }
 
     public function create(){
-    	return view('');	
+    	return view('formularioProducto');	
     }
 
-    public function store(){
+    public function store(Request $request){
     	//return view();
+
+    	//dd($request->all()); Metodo para imprimir
+
+    	$product = new Product();
+    	$product->name = $request->input('name');
+    	$product->description = $request->input('description');
+    	$product->price = $request->input('price');
+    	$product->long_description = $request->input('long_description');
+    	$product->save(); //INSERT
+
+    	return view('formularioProducto');
+
     }
 
 }
