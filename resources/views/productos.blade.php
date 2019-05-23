@@ -33,10 +33,11 @@
 
           
             <div class="col-md-3">
-                <h4 class="text-center">Precio: </h4>
+                <h4 class="text-center">Eliminar: </h4>
                 <hr>
                 @foreach ($products as $product)
-                <h4 class="text-center">{{ $product->price}}</h4>
+                
+                <a href=" {{ url('/admin/products/'.$product->id.'/delete') }} "><h4>Eliminar</h4></a>
                 
                 @endforeach
             </div>

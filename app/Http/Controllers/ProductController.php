@@ -34,4 +34,21 @@ class ProductController extends Controller
 
     }
 
+
+    public function update($id){
+    	//
+    }
+
+
+
+      public function destroy($id){
+    
+
+    	$product = Product::find($id);
+    	$product->delete(); //Eliminar
+
+    	return view('formularioProducto');
+
+    }
+
 }

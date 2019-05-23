@@ -24,6 +24,13 @@ Route::get('/admin/products','ProductController@index'); //listado
 Route::get('/admin/products/create','ProductController@create'); //formulario
 Route::post('/admin/products','ProductController@store'); //registrar
 
+//
+Route::get('/admin/products{id}/edit','ProductController@update'); //Formulario edicion
+Route::post('/admin/products{id}/edit','ProductController@update'); //Edición
+
+Route::get('/admin/products/{id}/delete','ProductController@destroy'); //Eliminar
+
+
 
 //Ruta que tienen seguridad con middleware auth
 Auth::routes();
