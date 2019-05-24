@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     //
     public function index(){
-    	$products = Product::paginate(5);
+    	$products = Product::paginate(15);
     	$num = 0;
         return view('productos')->with(compact('products','num'));
     }
@@ -30,12 +30,17 @@ class ProductController extends Controller
     	$product->long_description = $request->input('long_description');
     	$product->save(); //INSERT
 
-    	return view('formularioProducto');
+
+        //Esta parte la vuelvo a crear del metodo index(PORQUE O SINO ME ARROJA ERROR DE VARIABLES NULAS YA QUE TIENE QUE SABER QUE PRODUCTOS HAY EN LA BDD)
+        $products = Product::paginate(15);
+        $num = 0;
+        return view('productos')->with(compact('products','num'));
+    	return view('productos');
         //return view('formularioProducto');
 
     }
 
-     public function update($id){
+    public function update($id){
     	//
     	$product=Product::find($id);
     	return view ('formularioEdicionProducto')->with(compact('product'));
@@ -56,7 +61,7 @@ class ProductController extends Controller
     }
 
 
-      public function destroy($id){
+    public function destroy($id){
     
 
     	$product = Product::find($id);

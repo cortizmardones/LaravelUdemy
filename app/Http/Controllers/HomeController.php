@@ -22,12 +22,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    
+
+    /*public function index()
     {
       
         //return view('home');
         $products = Product::paginate(5);
         $num = 0;
         return view('productos')->with(compact('products','num'));
-    }
+    }*/
 }
