@@ -31,6 +31,7 @@ class ProductController extends Controller
     	$product->save(); //INSERT
 
     	return view('formularioProducto');
+        //return view('formularioProducto');
 
     }
 
@@ -53,7 +54,6 @@ class ProductController extends Controller
     	return view('formularioProducto');
 
     }
-
 
 
       public function destroy($id){
