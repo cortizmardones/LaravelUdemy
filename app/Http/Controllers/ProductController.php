@@ -67,6 +67,11 @@ class ProductController extends Controller
     	$product = Product::find($id);
     	$product->delete(); //Eliminar
 
+         //Esta parte la vuelvo a crear del metodo index(PORQUE O SINO ME ARROJA ERROR DE VARIABLES NULAS YA QUE TIENE QUE SABER QUE PRODUCTOS HAY EN LA BDD)
+        $products = Product::paginate(15);
+        $num = 0;
+        return view('productos')->with(compact('products','num'));
+
     	return view('formularioProducto');
 
     }

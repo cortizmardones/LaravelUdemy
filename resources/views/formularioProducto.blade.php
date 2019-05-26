@@ -27,9 +27,15 @@
                     <label for="">Price</label>
                     <input type="num" name="price" class="form-control" required>
                     <br>
-                    <button class="btn btn-info">Enviar</button>
+                    <button class="btn btn-success">Enviar</button>
                 </form>
                 
+                <br>
+                <a href=" {{ url('/admin/products') }} "><button class="btn btn-info"> Volver</button></a>
+
+               
+                 
+                     
             </div>
 
         </div>
