@@ -9,7 +9,7 @@
         <div class="row">
             
             <div class="col-md-2">
-                <a href=" {{ url('/admin/products/create') }} "><button class="btn btn-success">Nuevo Producto </button></a>
+                <a href=" {{ url('/admin/products/create') }} "><button class="btn btn-success"><i class="fas fa-plus-square"></i> Nuevo Producto </button></a>
             </div>
 
             <div class="col-md-2">
@@ -44,7 +44,7 @@
                 <hr>
                 @foreach ($products as $product)
                 
-                <a href=" {{ url('/admin/products/'.$product->id.'/delete') }} "><h4 class="text-center">Eliminar</h4></a>
+                <a href=" {{ url('/admin/products/'.$product->id.'/delete') }} "><h4 class="text-center"><i class="fas fa-trash-alt"></i></h4></a>
                 
                 @endforeach
             </div>
@@ -55,7 +55,7 @@
                 <hr>
                 @foreach ($products as $product)
                 
-                 <a href=" {{ url('/admin/products/.$product->id./formulario') }} "><h4 class="text-center">Editar</h4></a>
+                 <a href=" {{ url('/admin/products/'.$product->id.'/formulario') }} "><h4 class="text-center"><i class="fas fa-edit"></i></h4></a>
                 
                 @endforeach
             </div>

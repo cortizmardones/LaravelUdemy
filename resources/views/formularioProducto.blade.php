@@ -27,11 +27,11 @@
                     <label for="">Price</label>
                     <input type="num" name="price" class="form-control" required>
                     <br>
-                    <button class="btn btn-success">Enviar</button>
+                    <button class="btn btn-success"><i class="fas fa-plus-square"></i> Agregar</button>
                 </form>
                 
                 <br>
-                <a href=" {{ url('/admin/products') }} "><button class="btn btn-info"> Volver</button></a>
+                <a href=" {{ url('/admin/products') }} "><button class="btn btn-info"><i class="fas fa-arrow-circle-left"></i> Volver</button></a>
 
                
                  
