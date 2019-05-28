@@ -26,6 +26,24 @@ class ProductController extends Controller
 
     	//dd($request->all()); Metodo para imprimir
 
+        //Mensajes personalizados (Ejemplo)
+        $messages = [
+            'name.required' => 'Es campo name es necesario',
+            'name.min' => 'Se necesita un minimo de 3 caracteres en el campo name',
+            'description.required' => 'Es campo description es necesario',
+            'long_description.required' => 'Es campo long_description es necesario',
+            'price.required' => 'Es campo price es necesario',
+        ];
+
+        //Validar los datos
+        $rules = [
+            'name' => 'required|min:3',
+            'description' => 'required|max:200',
+            'long_description' => 'required|max:200',
+            'price' => 'required|numeric|min:0',
+        ];
+        $this->validate($request,$rules,$messages);
+
     	$product = new Product();
     	$product->name = $request->input('name');
     	$product->description = $request->input('description');
@@ -51,6 +69,15 @@ class ProductController extends Controller
 
 
     public function update2(Request $request,$id){
+
+        //Validación de datos.
+        $rules = [
+            'name' => 'required|min:3',
+            'description' => 'required|max:200',
+            'price' => 'required|numeric|min:0',
+        ];
+        $this->validate($request,$rules);
+
     	
         $product = Product::find($id);
     	$product->name = $request->input('name');

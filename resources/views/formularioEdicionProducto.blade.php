@@ -13,6 +13,19 @@
                 <br>
                 Formulario de edicion de  producto:
                 <br><br>
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li> {{ $error }} </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+
+
                 <form method="POST"  action=" {{ url('/admin/products/'.$products->id.'/edit') }} ">
                      {{ csrf_field() }}
                     
@@ -26,7 +39,7 @@
                     <input type="text" name="long_description" class="form-control" value="{{ $products->long_description }}" >
                     <br>
                     <label for="">Price</label>
-                    <input type="num" name="price" class="form-control" value="{{ $products->price }}">
+                    <input type="number" name="price" class="form-control" value="{{ $products->price }}">
                     <br>
                     <button class="btn btn-success"><i class="fas fa-edit"></i> Modificar</button>
                 </form>

@@ -29,16 +29,10 @@ Route::get('/admin/products','ProductController@index'); //listado
 Route::get('/admin/products/create','ProductController@create'); //formulario
 Route::post('/admin/products','ProductController@store'); //registrar
 
-Route::get( '/admin/products/{id}/formulario','ProductController@update'); //Formulario edicion
+Route::get( '/admin/products/{id}/edit','ProductController@update'); //Formulario edicion
 Route::post('/admin/products/{id}/edit','ProductController@update2'); //Edición
 
 Route::get('/admin/products/{id}/delete','ProductController@destroy'); //Eliminar
 
 
-
-
-
-
-//Ruta prueba
-Route::get('/productos','PruebaController@welcome');
 

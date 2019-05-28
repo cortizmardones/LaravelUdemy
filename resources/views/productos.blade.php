@@ -55,7 +55,7 @@
                 <hr>
                 @foreach ($products as $product)
                 
-                 <a href=" {{ url('/admin/products/'.$product->id.'/formulario') }} "><h4 class="text-center"><i class="fas fa-edit"></i></h4></a>
+                 <a href=" {{ url('/admin/products/'.$product->id.'/edit') }} "><h4 class="text-center"><i class="fas fa-edit"></i></h4></a>
                 
                 @endforeach
             </div>
